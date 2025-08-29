@@ -53,3 +53,11 @@ document.querySelectorAll(".call-btn").forEach((btn) => {
 
     // alert
     alert(`Calling ${name} (${number})...`);
+     // add to call history
+    const time = new Date().toLocaleString();
+    const entry = document.createElement("div");
+    entry.className = "p-2 border-b text-sm";
+    entry.innerHTML = `<strong>${name}</strong> - ${number} <br> <span class="text-gray-500 text-xs">${time}</span>`;
+    historyContainer.prepend(entry);
+  });
+});
