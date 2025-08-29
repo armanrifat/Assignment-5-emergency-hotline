@@ -61,3 +61,8 @@ document.querySelectorAll(".call-btn").forEach((btn) => {
     historyContainer.prepend(entry);
   });
 });
+
+// 🗑 Clear History button
+clearBtn.addEventListener("click", () => {
+  historyContainer.innerHTML = "";
+});
