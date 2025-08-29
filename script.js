@@ -53,3 +53,24 @@ for (let singleCard of cards) {
 
    
   });
+
+  // copy-btn
+    
+  copyBtn.addEventListener('click',function(){
+      const copyCount = document.getElementById('copy-count')
+      const serviceNumber = singleCard.querySelector(".service-number").innerText;
+      let copyCountNumber = parseInt(copyCount.innerText)
+      copyCountNumber++
+      copyCount.innerText = copyCountNumber
+      navigator.clipboard.writeText(serviceNumber)
+      const copyAlert = `This number has been copied - ${serviceNumber}`
+      alert(copyAlert)
+  })
+
+  
+}
+
+document.getElementById('clear-btn').addEventListener('click',function(){
+  const historyContainer = document.getElementById("history-container");
+  historyContainer.innerHTML = ""
+})
