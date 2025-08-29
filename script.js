@@ -33,3 +33,17 @@ document.querySelectorAll(".copy-btn").forEach((btn) => {
     });
   });
 });
+
+// 📞 Call button click
+document.querySelectorAll(".call-btn").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    const name = card.querySelector(".service-name").textContent.trim();
+    const number = card.querySelector(".service-number").textContent.trim();
+
+    let coins = parseInt(coinCount.textContent);
+
+    if (coins < 20) {
+      alert("Not enough coins! You need at least 20 coins to make a call.");
+      return;
+    }
