@@ -50,3 +50,6 @@ document.querySelectorAll(".call-btn").forEach((btn) => {
 
     // reduce coins
     coinCount.textContent = coins - 20;
+
+    // alert
+    alert(`Calling ${name} (${number})...`);
