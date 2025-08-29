@@ -26,3 +26,10 @@ document.querySelectorAll(".copy-btn").forEach((btn) => {
  // copy to clipboard
     navigator.clipboard.writeText(number).then(() => {
       alert(`Hotline number ${number} copied to clipboard!`);
+
+          // increase copy count
+      let current = parseInt(copyCount.textContent);
+      copyCount.textContent = current + 1;
+    });
+  });
+});
