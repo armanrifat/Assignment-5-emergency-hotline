@@ -16,3 +16,9 @@ document.querySelectorAll(".card-heart").forEach((heart) => {
     heartCount.textContent = current + 1;
   });
 });
+
+// 📋 Copy button click
+document.querySelectorAll(".copy-btn").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    const number = card.querySelector(".service-number").textContent.trim();
