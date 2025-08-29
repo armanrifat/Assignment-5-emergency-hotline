@@ -47,3 +47,6 @@ document.querySelectorAll(".call-btn").forEach((btn) => {
       alert("Not enough coins! You need at least 20 coins to make a call.");
       return;
     }
+
+    // reduce coins
+    coinCount.textContent = coins - 20;
